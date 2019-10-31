@@ -28,4 +28,10 @@ body {
 
 ::-webkit-input-placeholder {
    color: grey;
+   font-size: 12px;
+}
+
+h4{
+  margin-left: -50px;
+  margin-top: 9px;
 }
