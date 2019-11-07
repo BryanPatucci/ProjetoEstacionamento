@@ -5,7 +5,6 @@ label{
   margin-top: 10px;
 }
 
-/*Joao*/
 .a{
   text-align: center;
   font-size: 26px;
@@ -34,4 +33,13 @@ body {
 h4{
   margin-left: -50px;
   margin-top: 9px;
+}
+
+.busca{
+  margin-top: 30px;
+}
+
+hr{
+  width: 116%;
+  margin-left: -24px;
 }

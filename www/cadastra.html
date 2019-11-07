@@ -12,55 +12,41 @@
 </head>
 <body>
 <div class="container">
-
-     <div class="card-panel a">
-           <div class="card-panel red darken-1 z-depth-5"><span class="white-text">BraJão´s</span>
-           <p class="white-text">Estacionamento</p></div>
-      </div>
       <div class="card-panel">
     <div class="row">
       <div class="col s6">
-      <a href="index.html"><div class="card-panel waves-effect waves-light white-text red darken-4 btn-small"><i class=" material-icons">arrow_back</i></div></a></div>
+      <div class="card-panel waves-effect waves-light white-text red darken-4 btn-small" id="voltar"><i class=" material-icons">arrow_back</i></div></div>
       <div class="col s6"><h4>Cadastrar</h4></div>
       <div class="lab1 col s12">
-        <label class="black-text">Nome do dono:</label>
-        <input class="" id="nomeProp" placeholder="Nome">
+        <label class="black-text">Nome:</label>
+        <input class="" name="nomeProp" id="nomeProp" placeholder="Nome do proprietário do veículo">
       </div>
       <div class="lab1 col s6">
         <label class="black-text">Hora de entrada:</label>
-        <input class="" id="horaE" placeholder="Hora">
+        <input class="" name="horaE" id="horaE" placeholder="Hora" type="time">
       </div>
       <div class="lab1 col s6">
-        <label class="black-text">Placa do veiculo:</label>
-        <input class="" id="placa" placeholder="Placa">
+        <label class="black-text">Placa:</label>
+        <input class="" name="placa" id="placa" placeholder="Placa do veículo">
       </div>
     </div>
     <div class="row">
-      <div class="col s6">
-        <p>
-      <label>
-        <input type="radio" class="with-gap" name="group1"/>
-        <span>Carro</span>
-      </label>
-    </p>
-      </div>
-      <div class="col s6">
-        <p>
-      <label>
-        <input type="radio" class="with-gap" name="group1"/>
-        <span>Moto</span>
-      </label>
-    </p>
-      </div>
+      <div class="input-field col s12">
+    <select id="tipo" name="tipo">
+      <option disabled selected>Selecione o veículo</option>
+      <option>Carro</option>
+      <option>Moto</option>
+    </select>
+     </div>
     </div>
     <div class="row">
       <div class="col s6">
-        <label class="black-text">Marca do carro:</label>
-        <input class="" id="marca" placeholder="Marca">
+        <label class="black-text">Marca:</label>
+        <input class="" name="marca" id="marca" placeholder="Marca do veiculo">
       </div>
       <div class="col s6">
-        <label class="black-text">Modelo do carro:</label>
-        <input class="" id="modelo" placeholder="Modelo">
+        <label class="black-text">Modelo:</label>
+        <input class="" name="modelo" id="modelo" placeholder="Modelo do veículo">
       </div>
       </div>
       <div class="row">
@@ -68,7 +54,7 @@
           <a href="consultar.html" class="waves-effect waves-light btn red darken-4 btn-small"><i class="material-icons left">content_paste</i>Consultar</a>
         </div>
         <div class="col s6">
-          <a href="cadastra.html" class="waves-effect waves-light btn red darken-4 btn-small" id="cadastrar"><i class="material-icons left">add</i>Cadastrar</a>
+          <a class="waves-effect waves-light btn red darken-4 btn-small" id="cadastrar"><i class="material-icons left">add</i>Cadastrar</a>
         </div>
       </div>
     </div>
@@ -77,6 +63,7 @@
 
   <script src="components/loader.js"></script>
   <script src="components/jquery-3.4.1.min.js"></script>
+  <script src="components/jquery.mask.min.js"></script>
   <script src="components/materialize.min.js"></script>
   <script src="components/sistema.js"></script>
 
