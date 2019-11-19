@@ -3,10 +3,10 @@ $(document).on("click","#cadastrar",function(){
 var parametros = {
   "horaE":$("#horaE").val(),
   "nomeProp":$("#nomeProp").val(),
-  "modelo":$("#modelo").val(),
-  "tipo":$("option:selected", ("#tipo")).text(),
+  "placa":$("#placa").val(),
   "marca":$("#marca").val(),
-  "placa":$("#placa").val()
+  "tipo":$("#tipo").val(),
+  "modelo":$("#modelo").val()
 };
 
 $.ajax({
@@ -17,10 +17,9 @@ success: function(data){
   navigator.notification.alert(data);
   $("horaE").val("");
   $("nomeProp").val("");
-  $("modelo").val("");
-  $("tipo").val("");
+  $("placa").val("");
   $("marca").val("");
-  $("placa").val("")
+  $("modelo").val("")
 },
 
 error: function(data){
@@ -37,21 +36,22 @@ $(document).on("click","#busca",function(){
 
     $.ajax({
       type: "post",
-      url:"https://.000webhostapp.com/listar.php",
+      url:"https://brajaos-est.000webhostapp.com/listar.php",
       data:parametro,
       dataType:"json",
 
       success: function(data){
         $("#horaE").val(data.entrada.horaE);
         $("#nomeProp").val(data.entrada.nomeProp);
-        $("#horaS").val(data.saida.horaS);
         $("#modelo").val(data.entrada.modelo);
         $("#marca").val(data.entrada.marca);
-        $("#tipo").val(data.entrada.tipo)
+        $("#tipo").val(data.entrada.tipo);
+        $("#horaS").val(data.saida.horaS);
+        $("#totalPagar").val(data.saida.totalPagar)
       },
 
       error: function(data){
-        navigator.notification.alert("Erro ao listar carros cadastrados!");
+        navigator.notification.alert("Erro ao listar veiculos cadastrados!");
       }
   });
 });
@@ -60,7 +60,7 @@ $(document).on("click","#busca",function(){
 /*Mascara input*/
 $(document).ready(function(){
       $('#placa').mask('AAA-9999')
-      });
+});
 
 /*Voltar*/
 $(document).on("click","#voltar", function(){
